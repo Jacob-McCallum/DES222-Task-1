@@ -8,7 +8,7 @@ variables are available to be used anywhere in our html document
     --white: #FFFFFF;
     --black: #000000;
     --colour1: #0B1D51;
-    --colour2: #797596;
+    --colour2: #bacde2;
     --colour3: #A1869E;
     --colour4: #BBADA0;
     --colour5: #D1C6AD;
@@ -46,33 +46,7 @@ body {
 
 .banner-subtitle {
     font-size: 2.25em;
-}
-
-/* Waves between the Banner and Body */
-.custom-shape-divider-bottom-1754976074 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1754976074 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 174px;
-}
-
-.custom-shape-divider-bottom-1754976074 .shape-fill {
-    fill: #3a7ca3;
-}
-
-.wave-background {
-    width: 100%;
-    background-color: #3a7ca3;
+    text-align: center;
 }
 
 .team-member-card {
@@ -89,12 +63,13 @@ body {
     width: 100%;
 }
 
+/*
 .team-member-card-blurb {
-    /* TODO: style the blurb with padding */
+    /* TODO: style the blurb with padding
     color: var(--white);
     padding: 0.5em;
 }
-
+*/
 .our-clients-title {
     background-color: var(--colour5);
     color: var(--colour3);
@@ -117,19 +92,15 @@ body {
     grid-area: ban;
 }
 
-#custom-shape-divider-bottom-1754976074 {
-    grid-area: wav;
+#strangeWeather1 {
+    grid-area: ci1;
 }
 
-#teamMemberCard1 {
-    grid-area: tm1;
-}
-
-#teamMemberCard2 {
+#strangeWeather2 {
     grid-area: tm2;
 }
 
-#teamMemberCard3 {
+#strangeWeather3 {
     grid-area: tm3;
 }
 
@@ -137,7 +108,7 @@ body {
     grid-area: oct;
 }
 #clientIcon1 {
-    grid-area: ci1;
+    grid-area: ci0;
 }
 
 #clientIcon2 {
@@ -174,11 +145,6 @@ body {
     column-gap: 1em;
 }
 
-.wave-background {
-    display: grid;
-    column-gap: 1em;
-}
-  
 /* 
 Responsive Layout breakpoints. We start 'mobile-first' i.e. we define how the layout should look
 for the smallest screen sizes. In this case we want a single column that spans the main container.
@@ -189,7 +155,7 @@ media queries for progressively bigger screen widths
     grid-template:
             "ban ban ban ban" minmax(8em, auto)
             " .   .   .   . " minmax(2em, auto)
-            "tm1 tm1 tm1 tm1" minmax(32em, auto)
+            "ci1 ci1 ci1 ci1" minmax(32em, auto)
             " .   .   .   . " minmax(2em, auto)
             "tm2 tm2 tm2 tm2" minmax(32em, auto)
             " .   .   .   . " minmax(2em, auto)
@@ -197,7 +163,7 @@ media queries for progressively bigger screen widths
             " .   .   .   . " minmax(4em, auto)
             "oct oct oct oct" minmax(2em, auto)
             " .   .   .   . " minmax(2em, auto)
-            "ci1 ci1 ci2 ci2" minmax(8em, auto)
+            "ci0 ci0 ci2 ci2" minmax(8em, auto)
             " .   .   .   . " minmax(1em, auto)
             "ci3 ci3 ci4 ci4" minmax(8em, auto)
             " .   .   .   . " minmax(1em, auto)
@@ -211,12 +177,12 @@ media queries for progressively bigger screen widths
         grid-template:
             "ban ban ban ban ban ban ban ban" minmax(8em, auto)
             " .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2" minmax(32em, auto)
+            "ci1 ci1 ci1 ci1 tm2 tm2 tm2 tm2" minmax(32em, auto)
             " .   .  tm3 tm3 tm3 tm3  .   . " minmax(32em, auto)
             " .   .   .   .   .   .   .   . " minmax(4em, auto)
             "oct oct oct oct oct oct oct oct" minmax(2em, auto)
             " .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2" minmax(8em, auto)
+            "ci0 ci0 ci0 ci0 ci2 ci2 ci2 ci2" minmax(8em, auto)
             " .   .   .   .   .   .   .   . " minmax(1em, auto)
             "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4" minmax(8em, auto)
             " .   .   .   .   .   .   .   . " minmax(1em, auto)
@@ -229,18 +195,15 @@ media queries for progressively bigger screen widths
 @media (min-width: 75em) {
     .main-container {
         grid-template:
-           "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
+            "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
             " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "wav wav wav wav wav wav wav wav wav wav wav wav" minmax(10em, auto)
-    }
-
-    .wave-background {
-        grid-template:
-            "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2 tm3 tm3 tm3 tm3" minmax(32em, auto)
-            " .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+            "ci1 ci1 ci1 ci1 ci1 ci1 ci1 ci1 tm2 tm2 tm2 tm2" minmax(22em, auto)
+            " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+            " .   .   .   .  tm3 tm3 tm3 tm3 tm3 tm3 tm3 tm3" minmax(4em, auto)
+            " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
             "oct oct oct oct oct oct oct oct oct oct oct oct" minmax(2em, auto)
             " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "ci1 ci1 ci1 ci2 ci2 ci2 ci3 ci3 ci3 ci4 ci4 ci4" minmax(8em, auto)
+            "ci0 ci0 ci0 ci2 ci2 ci2 ci3 ci3 ci3 ci4 ci4 ci4" minmax(8em, auto)
             " .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
             "ci5 ci5 ci5 ci6 ci6 ci6 ci7 ci7 ci7 ci8 ci8 ci8" minmax(8em, auto)
     }
