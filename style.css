@@ -49,7 +49,7 @@ body {
     text-align: center;
 }
 
-.team-member-card {
+.strange-weather-card {
     /* TODO: style the card as a column based flexbox with rounded corners */
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ body {
 }
 
 /* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
-.team-member-card-image {
+.strange-weather-card-image {
     width: 100%;
 }
 
@@ -104,15 +104,12 @@ body {
     grid-area: tm3;
 }
 
-#ourClientsTitle {
-    grid-area: oct;
-}
-#clientIcon1 {
-    grid-area: ci0;
+#protestImage1 {
+    grid-area: pi1;
 }
 
-#clientIcon2 {
-    grid-area: ci2;
+#protestImage2 {
+    grid-area: pi2;
 }
 
 #clientIcon3 {
@@ -160,10 +157,8 @@ media queries for progressively bigger screen widths
             "tm2 tm2 tm2 tm2" minmax(32em, auto)
             " .   .   .   . " minmax(2em, auto)
             "tm3 tm3 tm3 tm3" minmax(32em, auto)
-            " .   .   .   . " minmax(4em, auto)
-            "oct oct oct oct" minmax(2em, auto)
             " .   .   .   . " minmax(2em, auto)
-            "ci0 ci0 ci2 ci2" minmax(8em, auto)
+            "pi1 pi1 pi2 pi2" minmax(8em, auto)
             " .   .   .   . " minmax(1em, auto)
             "ci3 ci3 ci4 ci4" minmax(8em, auto)
             " .   .   .   . " minmax(1em, auto)
@@ -179,10 +174,8 @@ media queries for progressively bigger screen widths
             " .   .   .   .   .   .   .   . " minmax(2em, auto)
             "ci1 ci1 ci1 ci1 tm2 tm2 tm2 tm2" minmax(32em, auto)
             " .   .  tm3 tm3 tm3 tm3  .   . " minmax(32em, auto)
-            " .   .   .   .   .   .   .   . " minmax(4em, auto)
-            "oct oct oct oct oct oct oct oct" minmax(2em, auto)
             " .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "ci0 ci0 ci0 ci0 ci2 ci2 ci2 ci2" minmax(8em, auto)
+            "pi1 pi1 pi1 pi1 pi2 pi2 pi2 pi2" minmax(8em, auto)
             " .   .   .   .   .   .   .   . " minmax(1em, auto)
             "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4" minmax(8em, auto)
             " .   .   .   .   .   .   .   . " minmax(1em, auto)
@@ -201,9 +194,7 @@ media queries for progressively bigger screen widths
             " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
             " .   .   .   .  tm3 tm3 tm3 tm3 tm3 tm3 tm3 tm3" minmax(4em, auto)
             " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "oct oct oct oct oct oct oct oct oct oct oct oct" minmax(2em, auto)
-            " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "ci0 ci0 ci0 ci2 ci2 ci2 ci3 ci3 ci3 ci4 ci4 ci4" minmax(8em, auto)
+            "pi1 pi1 pi1 pi2 pi2 pi2 ci3 ci3 ci3 ci4 ci4 ci4" minmax(8em, auto)
             " .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
             "ci5 ci5 ci5 ci6 ci6 ci6 ci7 ci7 ci7 ci8 ci8 ci8" minmax(8em, auto)
     }
